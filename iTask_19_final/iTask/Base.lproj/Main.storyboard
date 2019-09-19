@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMZ-Dw-dXF">
-                                <rect key="frame" x="0.0" y="819" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem systemItem="recents" id="vYN-yO-RRQ"/>
@@ -27,18 +27,31 @@
                                 </items>
                             </tabBar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIi-yY-aum">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="27" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="iTask" id="s8W-ld-WeB"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3oe-zV-Nue">
-                                <rect key="frame" x="0.0" y="188" width="414" height="631"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.1764705882" green="0.2784313725" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" showsScopeBar="YES" id="sx0-8F-7gu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="barTintColor" red="0.69411764705882351" green="0.81568627450980391" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <scopeButtonTitles>
+                                        <string>Data</string>
+                                        <string>Prioridade</string>
+                                    </scopeButtonTitles>
+                                    <connections>
+                                        <outlet property="delegate" destination="BYZ-38-t0r" id="kX5-HE-OE8"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="4" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="bcI-Gk-YwW" customClass="TableCell" customModule="iTask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="84" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bcI-Gk-YwW" id="IMY-wk-tsu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="99.666666666666671"/>
@@ -118,37 +131,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="AFb-9u-zxw"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" showsScopeBar="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sx0-8F-7gu">
-                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="QQk-Mv-d7N"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.69411764705882351" green="0.81568627450980391" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <scopeButtonTitles>
-                                    <string>Data</string>
-                                    <string>Prioridade</string>
-                                </scopeButtonTitles>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kX5-HE-OE8"/>
-                                </connections>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803926" green="0.94509803921568625" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="3oe-zV-Nue" firstAttribute="top" secondItem="TIi-yY-aum" secondAttribute="bottom" constant="17" id="1Me-Np-7EL"/>
                             <constraint firstAttribute="trailing" secondItem="TIi-yY-aum" secondAttribute="trailing" id="3RW-EA-lri"/>
-                            <constraint firstItem="gMZ-Dw-dXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HsL-YL-Qq8"/>
-                            <constraint firstItem="TIi-yY-aum" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Jz0-yC-rwg"/>
-                            <constraint firstItem="3oe-zV-Nue" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pkl-VK-agf"/>
-                            <constraint firstItem="sx0-8F-7gu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QXi-nh-efi"/>
-                            <constraint firstItem="gMZ-Dw-dXF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SI0-4u-FfC"/>
-                            <constraint firstItem="3oe-zV-Nue" firstAttribute="top" secondItem="sx0-8F-7gu" secondAttribute="bottom" id="UJT-y5-ffk"/>
-                            <constraint firstItem="sx0-8F-7gu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zgc-Q8-RR1"/>
-                            <constraint firstItem="gMZ-Dw-dXF" firstAttribute="top" secondItem="3oe-zV-Nue" secondAttribute="bottom" id="bRR-0L-eXO"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="gMZ-Dw-dXF" secondAttribute="bottom" constant="-40" id="fJD-QS-bgr"/>
+                            <constraint firstItem="gMZ-Dw-dXF" firstAttribute="top" secondItem="3oe-zV-Nue" secondAttribute="bottom" id="75D-kE-ZB6"/>
+                            <constraint firstItem="3oe-zV-Nue" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ba2-Xt-QpD"/>
+                            <constraint firstItem="gMZ-Dw-dXF" firstAttribute="leading" secondItem="3oe-zV-Nue" secondAttribute="leading" id="Cfh-Xi-MUU"/>
+                            <constraint firstItem="gMZ-Dw-dXF" firstAttribute="trailing" secondItem="3oe-zV-Nue" secondAttribute="trailing" id="cWO-Wf-4P4"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="gMZ-Dw-dXF" secondAttribute="bottom" constant="-34" id="fJD-QS-bgr"/>
                             <constraint firstItem="TIi-yY-aum" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="knq-1A-QhI"/>
-                            <constraint firstItem="3oe-zV-Nue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="teC-yx-chF"/>
-                            <constraint firstItem="sx0-8F-7gu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uZC-nh-oGx"/>
+                            <constraint firstItem="3oe-zV-Nue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tgf-SZ-5GX"/>
+                            <constraint firstItem="3oe-zV-Nue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u98-EI-5Mh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

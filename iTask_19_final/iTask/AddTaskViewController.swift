@@ -61,24 +61,22 @@ class AddTaskViewController: UIViewController {
     
     @IBAction func save(_ sender: Any) {
         guard let newName = tituloInput.text, let newCategoria = catInput.text, let newPrio = prioriInput.text, let newDescrition = descricaoInput.text, let newDate = datePicker?.date else { return }
+        var newicon = "pessoal"
+        if newCategoria == "academico" {
+            newicon = "academico"
+        } else if newCategoria == "pessoal" {
+            newicon = "pessoal"
+        } else if newCategoria == "profissional" {
+            newicon = "profissional"
+        } else {
+            newicon = "pessoal"
+        }
         
-//        if newCategoria == "academico" {
-//            var newicon = "academico"
-//            var categoria = TaskType.academico
-//        }
-//        if newCategoria == "pessoal" {
-//            var newicon = "pessoal"
-//            var categoria = TaskType.pessoal
-//        }
-//        if newCategoria == "profissional" {
-//            var newicon = "profissional"
-//            var categoria = TaskType.profissional
-//        }
-        
-        let newTask = Task(titulo: newName, dataEntrega: newDate, prioridade: newPrio, icon: "pessoal", categoria: newCategoria)
+        let newTask = Task(titulo: newName, dataEntrega: newDate, prioridade: newPrio, icon: newicon, categoria: newCategoria)
         
         if let prevController = prevController{
             prevController.currentTaskArray.append(newTask)
+            prevController.taskArray.append(newTask)
         }
         prevController?.table.reloadData()
         navigationController?.popViewController(animated: true)

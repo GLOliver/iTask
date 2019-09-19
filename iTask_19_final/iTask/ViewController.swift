@@ -19,8 +19,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTasks()
+        sortTasks()
         setUpSearchBar()
         alterLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        sortTasks()
+        table.reloadData()
+    }
+    
+    func sortTasks(){
+        taskArray.sort { (a, b) -> Bool in
+            a.dataEntrega < b.dataEntrega
+        }
+        currentTaskArray.sort { (a, b) -> Bool in
+            a.dataEntrega < b.dataEntrega
+        }
     }
     
     private func setUpTasks(){
@@ -41,7 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func alterLayout() {
-        table.tableHeaderView = UIView()
+        //table.tableHeaderView = UIView()
         // search bar in section header
         table.estimatedSectionHeaderHeight = 50
         // search bar in navigation bar
