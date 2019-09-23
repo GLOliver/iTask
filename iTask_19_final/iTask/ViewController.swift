@@ -5,8 +5,9 @@
 //  Created by Aluno Mack on 18/09/19.
 //  Copyright © 2019 Aluno Mack. All rights reserved.
 //
-
+import UserNotifications
 import UIKit
+
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerLocal()
         setUpTasks()
         sortTasks()
         setUpSearchBar()
@@ -36,6 +38,44 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         currentTaskArray.sort { (a, b) -> Bool in
             a.dataEntrega < b.dataEntrega
         }
+    }
+    
+    @objc func registerLocal() {
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if granted {
+              print("ay!")
+            } else {
+              print("D'oh!")
+            }
+        }
+    }
+    
+    func scheduleLocal(_ newtask: Task){
+        let center = UNUserNotificationCenter.current()
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent()
+        content.title = newtask.titulo
+        content.body = "Data de entrega: HOJE!!"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["cuctomData": "fizzbuzz"]
+        content.sound = .default
+        
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 10
+        dateComponents.minute = 30
+        
+  //      let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        
+        center.add(request)
+        
     }
     
     private func setUpTasks(){

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotificationsUI
 
 class AddTaskViewController: UIViewController {
     
@@ -77,7 +78,9 @@ class AddTaskViewController: UIViewController {
         if let prevController = prevController{
             prevController.currentTaskArray.append(newTask)
             prevController.taskArray.append(newTask)
+            prevController.scheduleLocal(newTask)
         }
+        
         prevController?.table.reloadData()
         navigationController?.popViewController(animated: true)
         
