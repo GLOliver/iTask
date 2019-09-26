@@ -1,0 +1,69 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1kB-7k-Vxw"; */
+"1kB-7k-Vxw.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7S3-wv-VV8"; */
+"7S3-wv-VV8.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LGp-54-3Bf"; */
+"LGp-54-3Bf.text" = "Label";
+
+/* Class = "UILabel"; text = "Título da Tarefa"; ObjectID = "QoQ-7H-TEa"; */
+"QoQ-7H-TEa.text" = "Título da Tarefa";
+
+/* Class = "UILabel"; text = "Data de entrega"; ObjectID = "Rs4-Lc-5Od"; */
+"Rs4-Lc-5Od.text" = "Data de entrega";
+
+/* Class = "UITextField"; placeholder = "Título da Tarefa"; ObjectID = "S5C-XJ-aKE"; */
+"S5C-XJ-aKE.placeholder" = "Título da Tarefa";
+
+/* Class = "UILabel"; text = "Prioridade"; ObjectID = "SuJ-El-hHn"; */
+"SuJ-El-hHn.text" = "Prioridade";
+
+/* Class = "UINavigationItem"; title = "iTask"; ObjectID = "WOf-GQ-elo"; */
+"WOf-GQ-elo.title" = "iTask";
+
+/* Class = "UILabel"; text = "Descrição"; ObjectID = "d2Q-5o-aKb"; */
+"d2Q-5o-aKb.text" = "Descrição";
+
+/* Class = "UINavigationItem"; title = "Tarefas"; ObjectID = "ePJ-NB-Qxc"; */
+"ePJ-NB-Qxc.title" = "Tarefas";
+
+/* Class = "UITextField"; placeholder = "Descrição"; ObjectID = "hwC-wo-kN3"; */
+"hwC-wo-kN3.placeholder" = "Descrição";
+
+/* Class = "UILabel"; text = "Prioridade"; ObjectID = "jGC-dl-ojP"; */
+"jGC-dl-ojP.text" = "Prioridade";
+
+/* Class = "UITextField"; placeholder = "Escolha a categoria"; ObjectID = "k44-hn-tQn"; */
+"k44-hn-tQn.placeholder" = "Escolha a categoria";
+
+/* Class = "UITextField"; placeholder = "Escolha a data"; ObjectID = "lQ8-0Q-1Up"; */
+"lQ8-0Q-1Up.placeholder" = "Escolha a data";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nKi-sl-hnC"; */
+"nKi-sl-hnC.text" = "Label";
+
+/* Class = "UILabel"; text = "Data de Entrega"; ObjectID = "njx-kJ-SYM"; */
+"njx-kJ-SYM.text" = "Data de Entrega";
+
+/* Class = "UINavigationItem"; title = "Adicionar Tarefa"; ObjectID = "qDO-zu-rWE"; */
+"qDO-zu-rWE.title" = "Adicionar Tarefa";
+
+/* Class = "UILabel"; text = "Prioridade"; ObjectID = "rMH-jp-Rns"; */
+"rMH-jp-Rns.text" = "Prioridade";
+
+/* Class = "UINavigationItem"; title = "iTask"; ObjectID = "s8W-ld-WeB"; */
+"s8W-ld-WeB.title" = "iTask";
+
+/* Class = "UITextField"; placeholder = "Escolha a prioridade"; ObjectID = "shL-wb-PI3"; */
+"shL-wb-PI3.placeholder" = "Escolha a prioridade";
+
+/* Class = "UISearchBar"; sx0-8F-7gu.scopeButtonTitles[0] = "Data"; ObjectID = "sx0-8F-7gu"; */
+"sx0-8F-7gu.scopeButtonTitles[0]" = "Data";
+
+/* Class = "UISearchBar"; sx0-8F-7gu.scopeButtonTitles[1] = "Prioridade"; ObjectID = "sx0-8F-7gu"; */
+"sx0-8F-7gu.scopeButtonTitles[1]" = "Prioridade";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uuv-tD-OVZ"; */
+"uuv-tD-OVZ.text" = "Label";
